@@ -7,9 +7,11 @@ const mapStateToProps = state => {
 };
 
 const Smurfs = props => {
-  console.log(props);
   return (
-    <>{props.village && props.village.map(smurfy => <Smurf {...smurfy} />)}</>
+    <>
+      {props.village &&
+        props.village.map(smurfy => <Smurf key={smurfy.id} {...smurfy} />)}
+    </>
   );
 };
 
