@@ -26,7 +26,7 @@ const Smurfs = props => {
       {showForm === 1 && <NewSmurf />}
       <hr />
       {props.village &&
-        props.village.map(smurfy => <Smurf key={smurfy.id} {...smurfy} />)}
+        props.village.map((smurfy, idx) => <Smurf key={idx} {...smurfy} />)}
     </Smurfin>
   );
 };
