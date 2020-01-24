@@ -17,13 +17,7 @@ const NewSmurf = props => {
   const [smurf, setSmurf] = useState({ ...initSmurfy });
   const handleAddSmurf = e => {
     e.preventDefault();
-    const { name, height, age } = smurf;
-    name.length > 0 &&
-      height.length > 0 &&
-      age.length &&
-      0 &&
-      props.dispatchAddSmurf(smurf) &&
-      setSmurf({ ...initSmurfy });
+    props.dispatchAddSmurf(smurf) && setSmurf({ ...initSmurfy });
   };
   const handleFormChange = e => {
     setSmurf({ ...smurf, [e.target.name]: e.target.value });
