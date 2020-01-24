@@ -9,7 +9,7 @@ function App() {
   // )}?cb=20150215152154&path-prefix=pl`;
 
   return (
-    <SmurfyVillage style={{ backgroundImage: bkg }}>
+    <SmurfyVillage>
       <h1>SMURFS! 2.0 W/ Redux</h1>
       <div>Welcome to your state management version of Smurfs!</div>
       <div>Start inside of your `src/index.js` file!</div>

@@ -28,8 +28,8 @@ server.get("/smurfs", (req, res) => {
 let smurfId = smurfs.length;
 
 server.post("/smurfs", (req, res) => {
-  const { name, age, height } = req.body;
-  const newSmurf = { name, age, height, id: smurfId };
+  const { name, age, height, image } = req.body;
+  const newSmurf = { name, age, height, id: smurfId, image: image || "" };
   if (!name || !age || !height) {
     return sendUserError(
       "Ya gone did smurfed! Name/Age/Height are all required to create a smurf in the smurf DB.",

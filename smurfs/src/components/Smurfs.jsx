@@ -9,8 +9,6 @@ const mapStateToProps = state => {
 };
 
 const Smurfs = props => {
-  const w = window.screen.availWidth;
-  const h = window.screen.availHeight;
   const handleClick = e => {
     e.preventDefault();
     props.dispatchGetSmurfs();
