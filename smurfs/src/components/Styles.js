@@ -6,6 +6,7 @@ export const SmurfyVillage = styled.div`
   background-color: ${props => props.bc || "green"};
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 `;
 export const SmurfyImage = styled.img`
   border-radius: 1.5rem;
@@ -47,4 +48,7 @@ export const SmurfyButton = styled.button`
   color: white;
   text-shadow: 2px 2px 2px #000;
   box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  :hover {
+    background-color: red;
+  }
 `;
