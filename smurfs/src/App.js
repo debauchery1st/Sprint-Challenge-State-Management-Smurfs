@@ -27,7 +27,7 @@ const App = props => {
       <h1>SMURFS! 2.0 W/ Redux</h1>
       <div>Welcome to your state management version of Smurfs!</div>
       <SmurfyButton onClick={handleClick}>Smurf Around</SmurfyButton>
-      <SmurfyButton onClick={handleNewSmurf}>*new</SmurfyButton>
+      <SmurfyButton onClick={handleNewSmurf}>*New</SmurfyButton>
       {showForm === 1 && <NewSmurf />}
       <hr />
       <Smurfs />
