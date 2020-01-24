@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { dispatchAddSmurf } from "../actions";
-
+import { SmurfyForm, SmurfyInput, SmurfyButton } from "./Styles";
 const mapStateToProps = state => {
   return { ...state };
 };
@@ -23,33 +23,33 @@ const NewSmurf = props => {
     setSmurf({ ...smurf, [e.target.name]: e.target.value });
   };
   return (
-    <form onSubmit={handleAddSmurf}>
-      <input
+    <SmurfyForm onSubmit={handleAddSmurf}>
+      <SmurfyInput
         name="name"
         placeholder="name"
         value={smurf.name}
         onChange={handleFormChange}
       />
-      <input
+      <SmurfyInput
         name="age"
         placeholder="age"
         value={smurf.age}
         onChange={handleFormChange}
       />
-      <input
+      <SmurfyInput
         name="height"
         placeholder="height"
         value={smurf.height}
         onChange={handleFormChange}
       />
-      <input
+      <SmurfyInput
         name="image"
         placeholder="image URL"
         value={smurf.image}
         onChange={handleFormChange}
       />
-      <button>add</button>
-    </form>
+      <SmurfyButton>add</SmurfyButton>
+    </SmurfyForm>
   );
 };
 
