@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { dispatchAddSmurf } from "../actions/addSmurf";
 
@@ -7,17 +7,46 @@ const mapStateToProps = state => {
 };
 
 const NewSmurf = props => {
+  const [smurf, setSmurf] = useState({
+    name: "",
+    age: "",
+    height: "",
+    image: ""
+  });
   const handleAddSmurf = e => {
     e.preventDefault();
-    console.log(e.target.value);
-    // props.dispatchAddSmurf
+    props.dispatchAddSmurf(smurf);
+  };
+  const handleFormChange = e => {
+    setSmurf({ ...smurf, [e.target.name]: e.target.value });
   };
   return (
     <form onSubmit={handleAddSmurf}>
-      <input placeholder="name" />
-      <input placeholder="age" />
-      <input placeholder="height" />
-      <input placeholder="image URL" />
+      <input
+        name="name"
+        placeholder="name"
+        value={smurf.name}
+        onChange={handleFormChange}
+      />
+      <input
+        name="age"
+        placeholder="age"
+        value={smurf.age}
+        onChange={handleFormChange}
+      />
+      <input
+        name="height"
+        placeholder="height"
+        value={smurf.height}
+        onChange={handleFormChange}
+      />
+      <input
+        name="image"
+        placeholder="image URL"
+        value={smurf.image}
+        onChange={handleFormChange}
+      />
+      <button>add</button>
     </form>
   );
 };

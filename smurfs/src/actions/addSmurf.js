@@ -12,7 +12,7 @@ export const addSmurf = smurf => {
 
 export const dispatchAddSmurf = smurf => dispatch => {
   return axios
-    .post(smurfVillage)
+    .post(smurfVillage, smurf)
     .then(smurfy => {
       dispatch({ type: ADD_SMURF, payload: smurfy.data });
     })
