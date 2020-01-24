@@ -1,18 +1,20 @@
 const initialState = {
   village: [
     {
-      name: "Brainey",
-      age: 200,
-      height: "5cm",
+      name: "",
+      age: 0,
+      height: "",
       id: 0,
-      image:
-        "https://vignette.wikia.nocookie.net/smurfs/images/e/e8/Brainy.jpg/revision/latest?cb=20090609234412"
+      image: ""
     }
   ]
 };
 
 export const smurfReducer = (state = initialState, action) => {
   switch (action.type) {
+    case "GET_SMURFY":
+      debugger;
+      return { ...state, village: action.payload };
     case "ADD_SMURF":
       return { ...state, village: [...state.village, action.payload] };
     default:
