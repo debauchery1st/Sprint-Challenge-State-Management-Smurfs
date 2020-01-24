@@ -11,7 +11,10 @@ export const SmurfyImage = styled.img`
   border-radius: 1.5rem;
 `;
 
-export const Smurfin = styled.span``;
+export const Smurfin = styled.span`
+  display: flex;
+  flex-flow: row wrap;
+`;
 export const SmurfBoard = styled.span`
   display: flex;
   flex-direction: column;

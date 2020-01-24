@@ -1,22 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import Smurfs from "./components/Smurfs";
 import { SmurfyVillage } from "./components/Styles";
+import { SmurfyButton } from "./components/Styles";
+import { connect } from "react-redux";
+import { dispatchGetSmurfs } from "./actions";
 
+import NewSmurf from "./components/NewSmurf";
 import "./App.css";
-function App() {
-  // const bkg = `https://vignette.wikia.nocookie.net/smerfy/images/5/5a/Wioska-smerf%C3%B3w-smurf-village.jpg/revision/latest/scale-to-width-down/${Number(
-  //   window.screen.availWidth
-  // )}?cb=20150215152154&path-prefix=pl`;
+
+const mapStateToProps = state => {
+  return { ...state };
+};
+const App = props => {
+  const [showForm, setShowForm] = useState(0);
+  const handleClick = e => {
+    e.preventDefault();
+    props.dispatchGetSmurfs();
+  };
+  const handleNewSmurf = e => {
+    e.preventDefault();
+    setShowForm(1);
+  };
 
   return (
     <SmurfyVillage bc="green">
       <h1>SMURFS! 2.0 W/ Redux</h1>
       <div>Welcome to your state management version of Smurfs!</div>
-      <div>Start inside of your `src/index.js` file!</div>
-      <div>Have fun!</div>
+      <SmurfyButton onClick={handleClick}>Smurf Around</SmurfyButton>
+      <SmurfyButton onClick={handleNewSmurf}>*new</SmurfyButton>
+      {showForm === 1 && <NewSmurf />}
+      <hr />
       <Smurfs />
     </SmurfyVillage>
   );
-}
+};
 
-export default App;
+export default connect(mapStateToProps, { dispatchGetSmurfs })(App);
