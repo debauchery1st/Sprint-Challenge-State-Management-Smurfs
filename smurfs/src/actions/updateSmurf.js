@@ -12,9 +12,10 @@ export const updateSmurf = smurf => {
 };
 
 export const dispatchUpdateSmurf = smurf => dispatch => {
+  debugger;
   const updateURL = `${smurfVillage}/${smurf.id}`;
   return axios
-    .post(updateURL, smurf)
+    .put(updateURL, smurf)
     .then(smurfy => {
       dispatch({ type: UPDATE_SMURF, payload: smurfy.data });
       axios.get(smurfVillage).then(smurfs => {

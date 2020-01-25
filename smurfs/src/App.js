@@ -12,14 +12,14 @@ const mapStateToProps = state => {
   return { ...state };
 };
 const App = props => {
-  const [showForm, setShowForm] = useState(0);
+  const [showForm, setShowForm] = useState(false);
   const handleClick = e => {
     e.preventDefault();
     props.dispatchGetSmurfs();
   };
   const handleNewSmurf = e => {
     e.preventDefault();
-    setShowForm((showForm + 1) % 2);
+    setShowForm(!showForm);
   };
 
   return (
@@ -28,7 +28,7 @@ const App = props => {
       <div>Welcome to your state management version of Smurfs!</div>
       <SmurfyButton onClick={handleClick}>Smurf Around</SmurfyButton>
       <SmurfyButton onClick={handleNewSmurf}>*New</SmurfyButton>
-      {showForm === 1 && <NewSmurf />}
+      {showForm && <NewSmurf />}
       <hr />
       <Smurfs />
     </SmurfyVillage>

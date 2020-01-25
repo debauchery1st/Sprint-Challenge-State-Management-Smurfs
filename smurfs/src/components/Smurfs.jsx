@@ -12,7 +12,9 @@ const Smurfs = props => {
   return (
     <Smurfin>
       {props.village &&
-        props.village.map((smurfy, idx) => <Smurf key={idx} {...smurfy} />)}
+        props.village.map((smurfy, idx) => (
+          <Smurf key={idx} smurfyID={smurfy.id} {...smurfy} />
+        ))}
     </Smurfin>
   );
 };

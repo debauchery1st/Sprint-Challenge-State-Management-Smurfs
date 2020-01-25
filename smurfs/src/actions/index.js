@@ -1,12 +1,5 @@
-import { addSmurf, dispatchAddSmurf } from "./addSmurf";
-import { getSmurfs, dispatchGetSmurfs } from "./getSmurfs";
-import { updateSmurf, dispatchUpdateSmurf } from "./updateSmurf";
+import { dispatchAddSmurf } from "./addSmurf";
+import { dispatchGetSmurfs } from "./getSmurfs";
+import { dispatchUpdateSmurf } from "./updateSmurf";
 
-export {
-  addSmurf,
-  getSmurfs,
-  dispatchGetSmurfs,
-  dispatchAddSmurf,
-  updateSmurf,
-  dispatchUpdateSmurf
-};
+export { dispatchGetSmurfs, dispatchAddSmurf, dispatchUpdateSmurf };

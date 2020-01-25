@@ -18,6 +18,7 @@ export const smurfReducer = (state = initialState, action) => {
     case "ADD_SMURF":
       return { ...state, village: [...state.village, action.payload] };
     case "UPDATE_SMURF":
+      console.log("SMURF REDUCER!");
       return {
         ...state,
         village: [

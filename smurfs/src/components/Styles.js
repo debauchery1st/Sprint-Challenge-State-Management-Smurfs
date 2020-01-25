@@ -54,7 +54,30 @@ export const SmurfyInput = styled.input`
     border: 4px solid #55a9fe;
   }
 `;
+
+export const SmurfyEdit = styled.input`
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  border: 2px solid green;
+  margin: 0.1rem;
+  :hover {
+    border: 4px solid #55a9fe;
+  }
+`;
+
+export const SmurfyUpdate = styled.button`
+  border-radius: 0.3rem;
+  border: 1px solid green;
+  margin: 0.2rem;
+  background-color: ${props => props.bc || "#55a9fe"};
+  color: white;
+
+  :hover {
+    border: 2px solid white;
+  }
+`;
 export const MetaSmurf = styled.div``;
+
 export const SmurfyButton = styled.button`
   border-radius: 0.5rem;
   padding: 0.5rem;
