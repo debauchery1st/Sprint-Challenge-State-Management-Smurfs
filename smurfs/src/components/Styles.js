@@ -11,6 +11,8 @@ export const SmurfyImage = styled.img`
   border-radius: 1.5rem;
   border: 1px solid black;
   background-color: white;
+  max-height: 300px;
+  max-width: 240px;
 `;
 
 export const Smurfin = styled.span`
