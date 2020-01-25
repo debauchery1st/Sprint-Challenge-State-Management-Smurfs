@@ -41,6 +41,10 @@ export const SmurfyForm = styled.form`
   flex-direction: column;
 `;
 
+export const SmurfSpan = styled.span`
+  display: ${props => props.display || "none"};
+`;
+
 export const SmurfyInput = styled.input`
   border-radius: 0.5rem;
   padding: 1rem;

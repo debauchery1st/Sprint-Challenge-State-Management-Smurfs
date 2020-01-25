@@ -6,7 +6,7 @@ const Smurf = props => {
   return (
     <SmurfBoard>
       <SmurfyImage
-        src={props.image}
+        src={props.image.length > 0 ? props.image : "/smurf.gif"}
         alt={props.name}
         title={`${props.name} ${props.age} ${props.height}`}
       />

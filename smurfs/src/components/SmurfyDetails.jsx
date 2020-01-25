@@ -1,6 +1,14 @@
 import React from "react";
-import { MetaSmurf } from "./Styles";
+import { connect } from "react-redux";
+
+import { MetaSmurf, SmurfSpan } from "./Styles";
 import { initialState } from "../reducers/smurfReducer";
+import { dispatchUpdateSmurf } from "../actions";
+
+const mapStateToProps = state => {
+  return { ...state };
+};
+
 const SmurfyDetails = props => {
   return (
     <MetaSmurf>
@@ -14,8 +22,9 @@ const SmurfyDetails = props => {
           {props.age} {props.height}
         </h4>
       )}
+      <SmurfSpan>edit</SmurfSpan>
     </MetaSmurf>
   );
 };
 
-export default SmurfyDetails;
+export default connect(mapStateToProps, { dispatchUpdateSmurf })(SmurfyDetails);
