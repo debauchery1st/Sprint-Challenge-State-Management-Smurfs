@@ -1,4 +1,4 @@
-const initialState = {
+export const initialState = {
   village: [
     {
       name: "Welcome to Smurf Village,",

@@ -8,7 +8,7 @@ const Smurf = props => {
       <SmurfyImage
         src={props.image}
         alt={props.name}
-        title={`age: ${props.age} height: ${props.height}`}
+        title={`${props.name} ${props.age} ${props.height}`}
       />
       <SmurfyDetails name={props.name} age={props.age} height={props.height} />
     </SmurfBoard>
