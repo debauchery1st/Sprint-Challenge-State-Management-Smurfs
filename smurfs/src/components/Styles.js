@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// export const Smurfy = styled.span``;
 export const SmurfyVillage = styled.div`
   display: flex;
   background-color: ${props => props.bc || "green"};
@@ -10,6 +9,8 @@ export const SmurfyVillage = styled.div`
 `;
 export const SmurfyImage = styled.img`
   border-radius: 1.5rem;
+  border: 1px solid black;
+  background-color: white;
 `;
 
 export const Smurfin = styled.span`
@@ -29,6 +30,7 @@ export const SmurfBoard = styled.span`
   box-shadow: 0 12px 12px rgba(0, 0, 0, 0.7);
   :hover {
     box-shadow: 0 12px 12px #55a9fe;
+    border: 2px white solid;
   }
 `;
 
@@ -40,9 +42,13 @@ export const SmurfyForm = styled.form`
 export const SmurfyInput = styled.input`
   border-radius: 0.5rem;
   padding: 1rem;
+  border: 4px solid green;
   margin: 0.2rem;
+  :hover {
+    border: 4px solid #55a9fe;
+  }
 `;
-
+export const MetaSmurf = styled.div``;
 export const SmurfyButton = styled.button`
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -55,8 +61,11 @@ export const SmurfyButton = styled.button`
   box-shadow: 0 12px 12px rgba(0, 0, 0, 0.7);
   :hover {
     background-color: red;
+    box-shadow: 0 12px 12px #55a9fe;
+    border: 2px white solid;
   }
-  :active: {
-    box-shadow: 7px 7px 7px #000;
+  :active {
+    border: 2px black solid;
   }
+}
 `;
