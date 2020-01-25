@@ -17,6 +17,14 @@ export const smurfReducer = (state = initialState, action) => {
       return { ...state, village: action.payload };
     case "ADD_SMURF":
       return { ...state, village: [...state.village, action.payload] };
+    case "UPDATE_SMURF":
+      return {
+        ...state,
+        village: [
+          ...state.village.filter(smrf => smrf.id !== action.payload.id),
+          action.payload
+        ]
+      };
     default:
       return { ...state };
   }

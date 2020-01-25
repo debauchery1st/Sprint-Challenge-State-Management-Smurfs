@@ -19,7 +19,7 @@ const App = props => {
   };
   const handleNewSmurf = e => {
     e.preventDefault();
-    setShowForm(1);
+    setShowForm((showForm + 1) % 2);
   };
 
   return (
